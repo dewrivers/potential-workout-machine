@@ -1,8 +1,6 @@
 const path = require("path");
-
 const express = require('express');
 var router =  express.Router();
-
 
 
     router.get('/', (req, res) => {
