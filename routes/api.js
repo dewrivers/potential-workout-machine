@@ -9,7 +9,7 @@ var router =  express.Router();
         console.log("req setup", req.params.id);
         var exerciseData = req.body;
         db.Workout.findByIdAndUpdate(
-            {_id: exerciseId},
+            exerciseId,
             {$push: {exercises: exerciseData}},
             {new:true, runValidators: true}
         )
