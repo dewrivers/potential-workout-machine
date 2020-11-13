@@ -2,8 +2,9 @@ const express = require('express');
 var Workout =require('../models/workout.js');
 var router =  express.Router();
 
+// POST route for workouts data
 router.post("/api/workouts", function(req, res){
-    console.log("WORKOUT POST API ROUTE HIT", req.body)
+    console.log("WORKOUT POST API ROUTE", req.body)
     Workout.create({})
         .then(data => {
         res.json(data);
@@ -41,7 +42,7 @@ router.post("/api/workouts", function(req, res){
     });
 });
 
-// POST route for workouts data
+
 
 
 // GET route for stats data
